@@ -63,7 +63,7 @@ void RunHitboxDebug() {
             continue;
         }
 
-        uintptr_t debugFlagAddr = damageCtrl + 0xA0;
+        uintptr_t debugFlagAddr = damageCtrl + 0xA8;
         *reinterpret_cast<uint8_t*>(debugFlagAddr) = 1;
 
         std::this_thread::sleep_for(std::chrono::seconds(1));
